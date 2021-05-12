@@ -64,14 +64,6 @@ class mtx:
         return self*a.inv()
     #raise a matrix to the power of an integer  O(abs(x)*n**3)
     def __pow__(self,x):
-#        s=[];
-#        for i in range(0,self.c):
-#            si=[]
-#            for j in range(0,self.r):
-#                if i==j: si+=[1]
-#                else: si+=[0]
-#            s+=[si]
-#        I=mtx(s)
         I=identity(self.c)
         a=self
         if x<0: a=self.inv()
